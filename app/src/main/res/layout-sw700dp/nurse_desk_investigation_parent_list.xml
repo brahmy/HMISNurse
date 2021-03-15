@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patientCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/investigationParentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/fadeBlue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="10_Sep-2020 10:00 AM - Dermotologist-OP"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText,MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/buttonPDF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_dropdown" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="2dp">
+
+
+            <LinearLayout
+                android:id="@+id/investigationChildresultLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_350sdp"
+                            android:layout_height="35dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="0dp"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.40"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="S.NO"
+                                android:textColor="@color/navColor"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.60"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="Lab Name"
+                                android:textColor="@color/navColor"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view" />
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="Type"
+                                android:textColor="@color/navColor"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText,RtlSymmetry" />
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="Action"
+                                android:textColor="@color/navColor"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/view" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/view" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/nurse_desk_investigation_child_recycler"
+                            android:layout_width="@dimen/_350sdp"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

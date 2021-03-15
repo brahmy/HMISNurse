@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <!-- region Tele Medicine -->
+    <string name="telemedicine_label" translatable="false">Telemedicine</string>
+    <!-- end region -->
+    <!-- Error message when a 401 or 403 error occurred -->
+    <string name="error_unauthorized" translatable="false">Unknown identifier</string>
+    <!-- Error message when a 422 error occurred -->
+    <string name="error_unprocessable_entity" translatable="false">The request cannot be completed</string>
+    <!--No results found-->
+    <string name="error_no_results" translatable="false">No result found</string>
+    <!-- Error message when an error occurred -->
+    <string name="error_generic_message" translatable="false">An error has occurred</string>
+    <!-- Error message when like/unlike call fails from remote server -->
+    <string name="error_like_unlike_failed" translatable="false">An error has occurred. Please try again</string>
+    <string name="error_invalid_credential" translatable="false">Invalid Credentials</string>
+
+    <!-- Alert dialog region-->
+    <string name="dialog_action_cancel" translatable="false">Cancel</string>
+    <string name="dialog_action_yes" translatable="false">Yes</string>
+    <string name="dialog_action_ok" translatable="false">OK</string>
+    <!-- end region-->
+
+    <!-- Internet connection region -->
+    <string name="no_connection" translatable="false">No internet connection…</string>
+    <!-- end region-->
+
+    <string name="book_appointment" translatable="false">Book Appointment</string>
+    <string name="book_appointment_session" translatable="false">Bookappointment \nSession</string>
+    <string name="book_appointment_add" translatable="false">Add Book \nAppointment</string>
+    <string name="doctor" translatable="false">Doctor</string>
+    <string name="department" translatable="false">Department</string>
+    <string name="radiology_lab" translatable="false">Radiology</string>
+    <string name="consultation" translatable="false">e-Consultation</string>
+    <string name="available" translatable="false">Available</string>
+    <string name="selected" translatable="false">Selected</string>
+    <string name="booked" translatable="false">Booked</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="permissions_needed" translatable="false">Permission Denied</string>
+    <string name="search_doctor_name" translatable="false">Search doctor…</string>
+    <string name="search_department_name" translatable="false">Search department…</string>
+    <string name="search_radiology_name" translatable="false">Search radiology…</string>
+    <string name="search_lab_name" translatable="false">Search lab…</string>
+    <string name="search" translatable="false">Search</string>
+
+    <string name="last_booked" translatable="false">Last Booked :</string>
+    <string name="book_again" translatable="false">Book Again</string>
+    <string name="chuck_search" translatable="false">Search</string>
+
+
+
+
+</resources>

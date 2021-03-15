@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    android:layout_width="800dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/view" />
+    <!--
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            >
+
+            <TextView
+                android:id="@+id/serialNumberTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="S.No"
+                android:textSize="@dimen/dr_medium_text"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:orientation="vertical"
+               >
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/VitalName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/ic_search_grey"
+                    android:fontFamily="@font/poppins"
+                    android:scrollHorizontally="true"
+                    android:textSize="@dimen/dr_medium_text"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/vitalEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLength="4"
+                    android:focusable="true"
+                    android:cursorVisible="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/navColor"
+                    android:textSize="@dimen/dr_medium_text" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <Spinner
+                android:id="@+id/uomSpinner"
+                android:layout_width="0dp"
+                android:paddingStart="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <ImageView
+                android:id="@+id/deleteImageView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                app:srcCompat="@drawable/ic_delete_black" />
+        </LinearLayout>
+
+    -->
+
+    <LinearLayout
+        android:layout_width="800dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="6.5">
+
+        <TextView
+            android:id="@+id/serialNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="S.No"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dr_medium_text"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/VitalName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:drawableRight="@drawable/ic_search_grey"
+            android:fontFamily="@font/poppins"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="@dimen/dr_medium_text"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+
+        <EditText
+            android:id="@+id/vitalEdittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:fontFamily="@font/poppins"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dr_medium_text"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+
+        <Spinner
+            android:id="@+id/uomSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dr_medium_text"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_delete_black" />
+    </LinearLayout>
+
+
+</LinearLayout>

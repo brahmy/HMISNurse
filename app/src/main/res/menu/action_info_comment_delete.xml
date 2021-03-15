@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/info"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="Info" />
+
+    <item
+        android:id="@+id/comment"
+        android:icon="@drawable/ic_comment_yellow_24dp"
+        android:title="Comment" />
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_delete_appointment"
+        android:title="Delete" />
+</menu>

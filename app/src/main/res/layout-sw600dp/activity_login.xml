@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.login.view_model.LoginViewModel" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/rlLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_bg"
+            android:visibility="gone" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_bottom_layout"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <LinearLayout
+                            android:id="@+id/ll_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="15dp"
+                                app:cardCornerRadius="75dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="30dp"
+                                    android:src="@drawable/hmis_logo" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="@string/health_info"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_header"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_20sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:padding="0dp">
+
+
+                                <LinearLayout
+                                    android:id="@+id/loginLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:animateLayoutChanges="true"
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    android:visibility="@{viewModel.loginLayout}">
+
+                                    <TextView
+                                        android:id="@+id/sigintitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:gravity="center_vertical"
+                                        android:text="@string/signin"
+                                        android:textColor="@color/navColor"
+                                        android:textSize="18sp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:hintTextAppearance="@style/BlackTextInputLayout"
+                                        app:hintTextColor="@color/navColor">
+
+
+                                        <EditText
+                                            android:id="@+id/userName"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="15dp"
+                                            android:fontFamily="@font/poppins"
+                                            android:gravity="start"
+                                            android:hint="User Name"
+                                            android:imeOptions="actionNext"
+                                            android:maxLength="25"
+                                            android:maxLines="1"
+                                            android:singleLine="true"
+                                            android:text="@={viewModel.username}"
+                                            android:textColor="@color/navColor"
+                                            android:textSize="16sp"
+                                            tools:ignore="HardcodedText" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+
+                                        <EditText
+                                            android:id="@+id/passwordEdittext"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginRight="5dp"
+                                            android:drawableRight="@drawable/ic_eye_close"
+                                            android:drawablePadding="20dp"
+                                            android:fontFamily="@font/poppins"
+                                            android:gravity="start"
+                                            android:hint="Password"
+                                            android:imeOptions="actionDone"
+                                            android:inputType="textPassword"
+                                            android:maxLength="25"
+                                            android:singleLine="true"
+                                            android:text="@={viewModel.password}"
+                                            android:textColor="@color/navColor"
+                                            android:textSize="16sp"
+                                            tools:ignore="HardcodedText" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/click"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center"
+                                        app:cardBackgroundColor="@color/colorAccent">
+
+                                        <TextView
+                                            android:id="@+id/siginbutton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:paddingTop="6dp"
+                                            android:paddingBottom="6dp"
+                                            android:text="@string/signinbutton"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            tools:ignore="HardcodedText" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <TextView
+                                        android:id="@+id/forgetpassword"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins"
+                                        android:gravity="center"
+                                        android:padding="8dp"
+                                        android:onClick="@{() -> viewModel.visisbleSendOTp()}"
+                                        android:text="@string/forgot"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="14sp" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <View
+                                            android:id="@+id/viewCenter"
+                                            android:layout_width="1dp"
+                                            android:layout_height="24dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:background="@color/colorPrimary" />
+
+                                        <TextView
+                                            android:id="@+id/termsAndCndition"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toStartOf="@+id/viewCenter"
+                                            android:fontFamily="@font/poppins"
+                                            android:gravity="center"
+                                            android:paddingStart="8dp"
+                                            android:paddingTop="4dp"
+                                            android:paddingEnd="8dp"
+                                            android:paddingBottom="4dp"
+                                            android:text="@string/terms_of_use"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:id="@+id/tvPrivacyPolicy"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toEndOf="@+id/viewCenter"
+                                            android:fontFamily="@font/poppins"
+                                            android:gravity="center"
+                                            android:paddingStart="8dp"
+                                            android:paddingTop="4dp"
+                                            android:paddingEnd="8dp"
+                                            android:paddingBottom="4dp"
+                                            android:text="@string/privacy_policy"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="14sp" />
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/forgetsendotpLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:animateLayoutChanges="true"
+                                    android:gravity="center"
+                                    android:visibility="@{viewModel.sendOptLayout}"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:gravity="center_vertical"
+                                        android:text="@string/forgotPasswordHeader"
+                                        android:textColor="@color/navColor"
+                                        android:textSize="18sp"
+                                        tools:ignore="HardcodedText" />
+
+
+                                    <LinearLayout
+                                        android:id="@+id/layoutSendotp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="@{viewModel.forgetUsernemeLayout}"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+
+                                            <EditText
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="20dp"
+                                                android:drawablePadding="20dp"
+                                                android:fontFamily="@font/poppins"
+                                                android:hint="@string/forgetotphint"
+                                                android:imeOptions="actionNext"
+                                                android:paddingStart="@dimen/_5sdp"
+                                                android:textColor="@color/navColor"
+                                                android:textSize="16sp"
+                                                android:text="@={viewModel.forgotpasswordusername}"
+                                                tools:ignore="HardcodedText" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/sentopt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="40dp"
+                                            android:onClick="@{() -> viewModel.validateSendOTp()}"
+                                            app:cardBackgroundColor="@color/colorAccent">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="center"
+                                                android:paddingStart="60dp"
+                                                android:paddingTop="6dp"
+                                                android:paddingEnd="60dp"
+                                                android:paddingBottom="6dp"
+                                                android:text="@string/sendopt"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp"
+                                                tools:ignore="HardcodedText" />
+                                        </androidx.cardview.widget.CardView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="8dp"
+                                            android:text="@string/loginheader"
+                                            android:onClick="@{() -> viewModel.visisbleLogin()}"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="14sp" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <View
+                                                android:id="@+id/viewCenter1"
+                                                android:layout_width="1dp"
+                                                android:layout_height="24dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_centerVertical="true"
+                                                android:background="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/termsAndCndition1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toStartOf="@+id/viewCenter1"
+                                                android:fontFamily="@font/poppins"
+                                                android:gravity="center"
+                                                android:paddingStart="8dp"
+                                                android:paddingTop="4dp"
+                                                android:paddingEnd="8dp"
+                                                android:paddingBottom="4dp"
+                                                android:text="@string/terms_of_use"
+                                                android:textColor="@color/colorPrimaryDark"
+                                                android:textSize="14sp" />
+
+                                            <TextView
+                                                android:id="@+id/tvPrivacyPolicy1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toEndOf="@+id/viewCenter1"
+                                                android:fontFamily="@font/poppins"
+                                                android:gravity="center"
+                                                android:paddingStart="8dp"
+                                                android:paddingTop="4dp"
+                                                android:paddingEnd="8dp"
+                                                android:paddingBottom="4dp"
+                                                android:text="@string/privacy_policy"
+                                                android:textColor="@color/colorPrimaryDark"
+                                                android:textSize="14sp" />
+
+                                        </RelativeLayout>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/layoutChangePassword"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:visibility="@{viewModel.changePasswordLayout}"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+
+                                            <EditText
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:drawablePadding="20dp"
+                                                android:enabled="false"
+                                                android:focusable="false"
+                                                android:fontFamily="@font/poppins"
+                                                android:hint="@string/enterOTP"
+                                                android:imeOptions="actionNext"
+                                                android:paddingStart="@dimen/_10sdp"
+                                                android:text="@={viewModel.otp}"
+                                                android:textColor="@color/navColor"
+                                                android:textSize="16sp"
+                                                tools:ignore="HardcodedText" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+
+                                            <EditText
+                                                android:id="@+id/newPasswordEditText"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:drawableRight="@drawable/ic_eye_close"
+                                                android:drawablePadding="20dp"
+                                                android:fontFamily="@font/poppins"
+                                                android:hint="@string/enterNewPassword"
+                                                android:imeOptions="actionNext"
+                                                android:inputType="textPassword"
+                                                android:maxLength="25"
+                                                android:text="@={viewModel.changePassword}"
+                                                android:paddingStart="@dimen/_10sdp"
+                                                android:textColor="@color/navColor"
+                                                android:textSize="16sp"
+                                                tools:ignore="HardcodedText" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:hintTextAppearance="@style/TextAppearance.AppCompat">
+
+
+                                            <EditText
+                                                android:id="@+id/confirmNewPasswordEditText"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:drawablePadding="20dp"
+                                                android:fontFamily="@font/poppins"
+                                                android:hint="@string/enterConfirmPassword"
+                                                android:imeOptions="actionNext"
+                                                android:inputType="textPassword"
+                                                android:maxLength="25"
+                                                android:text="@={viewModel.confirmPassword}"
+                                                android:paddingStart="@dimen/_10sdp"
+                                                android:textColor="@color/navColor"
+                                                android:textSize="16sp"
+                                                tools:ignore="HardcodedText" />
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/restPassword"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginTop="20dp"
+                                            android:onClick="@{() -> viewModel.validateChangePassword()}"
+                                            app:cardBackgroundColor="@color/colorAccent">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:padding="6dp"
+                                                android:text="@string/restPassword"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp"
+                                                tools:ignore="HardcodedText" />
+                                        </androidx.cardview.widget.CardView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:padding="8dp"
+                                            android:text="@string/loginheader"
+                                            android:onClick="@{() -> viewModel.visisbleLogin()}"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="14sp" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <View
+                                                android:id="@+id/viewCenter2"
+                                                android:layout_width="1dp"
+                                                android:layout_height="24dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_centerVertical="true"
+                                                android:background="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/termsAndCndition2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toStartOf="@+id/viewCenter2"
+                                                android:fontFamily="@font/poppins"
+                                                android:gravity="center"
+                                                android:paddingStart="8dp"
+                                                android:paddingTop="4dp"
+                                                android:paddingEnd="8dp"
+                                                android:paddingBottom="4dp"
+                                                android:text="@string/terms_of_use"
+                                                android:textColor="@color/colorPrimaryDark"
+                                                android:textSize="14sp" />
+
+                                            <TextView
+                                                android:id="@+id/tvPrivacyPolicy2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_toEndOf="@+id/viewCenter2"
+                                                android:fontFamily="@font/poppins"
+                                                android:gravity="center"
+                                                android:paddingStart="8dp"
+                                                android:paddingTop="4dp"
+                                                android:paddingEnd="8dp"
+                                                android:paddingBottom="4dp"
+                                                android:text="@string/privacy_policy"
+                                                android:textColor="@color/colorPrimaryDark"
+                                                android:textSize="14sp" />
+
+                                        </RelativeLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/rl_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/version"
+                android:textColor="@color/liteGrey"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvBottomView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/copyright_msg"
+                    android:textColor="@color/liteGrey"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/copyright_name"
+                        android:textColor="@color/liteGrey"
+                        android:textSize="@dimen/_9ssp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/bottom_oasys_logo" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

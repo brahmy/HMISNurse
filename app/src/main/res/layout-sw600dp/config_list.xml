@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:id="@+id/img_normallist"
+        android:layout_height="@dimen/_20sdp"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/Department"
+        android:id="@+id/config_name"
+        android:fontFamily="@font/poppins"
+        android:layout_gravity="center"
+        android:textSize="11sp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlSymmetry">
+
+    </TextView>
+</LinearLayout>

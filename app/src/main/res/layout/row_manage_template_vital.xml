@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        app:divider="@drawable/divider_color_white"
+        app:showDividers="middle">
+
+
+        <TextView
+            android:id="@+id/serialNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="S.No"
+            android:textColor="@color/navColor"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.50"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Test Name"
+            android:textColor="@color/navColor"
+            android:textSize="13sp" />
+
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".75"
+            android:gravity="center"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_delete_black" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

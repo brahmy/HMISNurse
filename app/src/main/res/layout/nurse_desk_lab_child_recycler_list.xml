@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:paddingStart="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.40"
+                android:id="@+id/labSNoTextView"
+                android:gravity="center"
+                android:text="S.No"
+                android:textSize="11sp"
+                android:textColor="@color/navColor"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <TextView
+                android:id="@+id/labNameText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.60"
+                android:gravity="center"
+                android:text="Lab Name"
+                android:textSize="11sp"
+                android:textColor="@color/navColor"                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/labTypeText"
+                android:text="Type"
+                android:textSize="11sp"
+                android:textColor="@color/navColor"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/actionImage"
+                android:gravity="center"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/green_tick"
+                android:paddingLeft="20dp"
+                android:textColor="@color/navColor"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLinearLayout"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/view" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider_color_white"
+        app:showDividers="middle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="16">
+
+        <TextView
+            android:id="@+id/serialNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="S.No"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/codeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="16sp"
+
+            android:fontFamily="@font/poppins"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+
+        <!-- <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:orientation="vertical">-->
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:layout_width="0dp"
+            android:id="@+id/autoCompleteTextView"
+            android:hint="@string/search_with_3_letters"
+            android:fontFamily="@font/poppins"
+            android:layout_weight="3"
+            android:textSize="16sp"
+            android:text="jggvhbnmvcbmmbmnmnmnnnjgfxvbnnbbcv"
+            android:drawableEnd="@drawable/ic_search"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+
+        <!--
+        </LinearLayout>-->
+
+
+        <Spinner
+            android:id="@+id/type_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+
+            />
+
+        <Spinner
+            android:id="@+id/testmethod"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            />
+
+
+        <Spinner
+            android:id="@+id/tolocation"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/commentsImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                app:srcCompat="@drawable/ic_comment_yellow_24dp" />
+
+            <ImageView
+                android:id="@+id/deleteImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                app:srcCompat="@drawable/ic_delete_black" />
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

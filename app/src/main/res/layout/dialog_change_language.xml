@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.dashboard.view_model.LanguagesViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="MissingDefaultResource">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                tools:ignore="RtlHardcoded,UselessParent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/languages"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/closeImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_close_white" />
+            </LinearLayout>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:id="@+id/radiogroup"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/tamilText"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:text="Tamil"
+                    android:textColor="#154"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/hindiText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="Hindi"
+                    android:textColor="#154"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/englishText"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="English"
+                    android:textColor="#154"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <RadioButton
+                    android:id="@+id/marathiText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="Marathi"
+                    android:textColor="#154"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/saveTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/secondaryColor"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_save_white"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingStart="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="7dp"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cancelCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:cardBackgroundColor="@color/primaryGrey"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_close_white"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingStart="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="7dp"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

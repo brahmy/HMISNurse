@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0066CC</color>
+    <color name="colorPrimaryDark">#0066CC</color>
+    <color name="colorAccent">#FFA31A</color>
+    <color name="secondaryColor">#00bfa5</color>
+    <color name="save">#00B28A</color>
+    <color name="grey">#999999</color>
+    <color name="colorLightGrey">#f9f9f9</color>
+    <color name="colorDarkGrey">#6F6F6F</color>
+    <color name="view">#F1F1F1</color>
+    <color name="navColor">#333</color>
+    <color name="positiveToast">#4CAF50</color>
+    <color name="negativeToast">#F44336</color>
+    <color name="white">#ffffff</color>
+    <color name="poweredBy">#CFD0D2</color>
+    <color name="dropImage">#70CFD0D2</color>
+    <color name="primaryGrey">#6F6F6F</color>
+    <color name="drawerTitle">#F8F8F8</color>
+    <color name="liteBlue">#E4EDF9</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="hintColor">#9E9E9E</color>
+    <color name="alternateRow">#F2F2F2</color>
+    <color name="orange">#FF5722</color>
+    <color name="Skyblue">#00BCD4</color>
+    <color name="ip_admission_yellow">#ff8517</color>
+
+    <color name="add_button">#0066cc</color>
+
+    <color name="blueprintborder">#EEEEEE</color>
+
+    <color name="download_button">#00b28a</color>
+    <color name="ip_bg_color">#ccffcc</color>
+    <color name="op_bg_color">#ccffff</color>
+
+<color name="searchColor">#48abc8</color>
+    <color name="fadeBlue">#CFDDF2</color>
+    <color name="fadeBlack">#BABABA</color>
+    <color name="fadeGreen">#EEF5F9</color>
+    <color name="outPtientGreen">#00b28a</color>
+    <color name="configurationOrange">#ff8517</color>
+    <color name="waitingPatientsBlue">#7D5DCB</color>
+    <color name="consultedPatientsGreen">#2ECF91</color>
+    <color name="prescriptionsYellow">#ff8517</color>
+    <color name="orderColorBlue">#2C98F2</color>
+    <color name="purple">#800080</color>
+    <color name="light_purple">#B27ABC</color>
+    <color name="clear_button">#9c9c9c</color>
+    <color name="browser_actions_bg_grey">#F5F5F5</color>
+    <color name="admission_yellow">#FFD85C</color>
+
+    <color name="checked_green">#148E13</color>
+
+    //Dashboard
+    <color name="op">#00b28a</color>
+    <color name="ip">#0066cc</color>
+    <color name="config">#ff8517</color>
+    <color name="wp">#8962e1</color>
+    <color name="cp">#1ed794</color>
+    <color name="orders">#2196f5</color>
+    <color name="pre">#ffaf00</color>
+    <color name="patient">#ffcf9f</color>
+    <color name="order">#9accfd</color>
+
+    <color name="Transparent">#00000000</color>
+
+    <color name="hmis_background">#0066cc</color>
+    <color name="presecription_order_color">#90007fff</color>
+
+    //Reports
+    <color name="reports_patients">#9153d6</color>
+    <color name="reports_adult">#ffc107</color>
+    <color name="reports_child">#17a2b8</color>
+
+    <color name="discharge_summary_color">#c7e5ff</color>
+
+    <color name="appointment_color">#2196f5</color>
+    <color name="white_60">#60FFFFFF</color>
+    <color name="white_90">#CCFFFFFF</color>
+    <color name="search_button">#48abc8</color>
+    <color name="save_button">#0066CC</color>
+    <color name="box_color">#e6eff8</color>
+    <color name="dark_charcoal">#333333</color>
+    <color name="hint_color">#999999</color>
+    <color name="availability_color">#00b28a</color>
+    <color name="booked_color">#9c9c9c</color>
+    <color name="selected_color">#fba711</color>
+    <color name="booked_status_color">#3F51B5</color>
+    <color name="cancelled_status_color">#ff0000</color>
+
+    <color name="session">#00AD9B</color>
+
+    <color name="nonsession">#E7E7E7</color>
+    <color name="black_50">#AA000000</color>
+    <color name="liteGrey">#878787</color>
+
+
+
+</resources>

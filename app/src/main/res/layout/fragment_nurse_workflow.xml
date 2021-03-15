@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.emr_workflow.view_model.EmrViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Nurse Desk"
+                android:textColor="@color/hmis_background"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvWard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toStartOf="@+id/iv_consulting_view"
+                android:layout_toEndOf="@+id/tv_title"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_consulting_view"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_consulting_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Consulting :"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_consultent_View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mr doctor/demplate/02/05/2008"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-7dp"
+            android:layout_marginBottom="-7dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:visibility="@{viewModel.progressBar}" />
+
+        <FrameLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/contentLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/colorPrimary"
+                        app:tabInlineLabel="true"
+                        app:tabMode="scrollable"
+                        app:tabSelectedTextColor="@color/colorPrimary"
+                        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                        app:tabTextColor="@color/primaryGrey" />
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <com.oss.digihealth.nur.utils.custom_views.CustomViewpager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/noDataFoundTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:text="No EMR Found!"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>
+

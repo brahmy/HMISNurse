@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/treatmentTabLinearLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp">
+        <ImageView
+            android:id="@+id/tabImageView"
+            android:layout_height="32dp"
+            android:layout_width="@dimen/_20sdp"
+            app:srcCompat="@drawable/ic_chief_complaints"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tabTextView"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:text="Doctor Details"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/primaryGrey"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.nursedesk.nurse_desk_lab.view_model.NurseDeskLabViewModel" />
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="end">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainLayout"
+
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:id="@+id/parentLinearLayout"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12sp"
+                        android:background="@drawable/edit_text_bottom_border"
+                        android:focusable="false"
+                        android:layout_gravity="center"
+                        android:inputType="text"
+                        android:visibility="gone"
+                        app:iconifiedByDefault="false"
+                        app:queryHint="@string/search_with_3_letters" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/searchDrawerCardView"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:visibility="gone"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="10dp"
+
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="22dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_favourite_back_arrow"
+                            tools:ignore="ContentDescription" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+
+                        android:id="@+id/norecord"
+                        android:layout_width="match_parent"
+                        android:text="No Record"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:textSize="@dimen/_20sdp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/activity_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/labparentRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:nestedScrollingEnabled="true"
+                            tools:ignore="UnusedAttribute" />
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="true">
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_search"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Search"
+                            android:textSize="21sp"
+                            tools:ignore="HardcodedText" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/qucikSearch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_search"
+                                    android:fontFamily="@font/poppins"
+                                    android:hint="@string/search_with_3_letters"
+                                    android:inputType="textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:padding="10dp"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:id="@+id/advanceSearchText"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:gravity="end"
+                                android:text="Advance Search"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText,RtlSymmetry" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/advanceSearchLayout"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/quick_pin"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="PIN*"
+                                        android:maxLength="14"
+                                        android:inputType="number"
+                                        android:padding="15dp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/patient_name"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Patient Name *"
+                                        android:maxLength="10"
+                                        android:padding="15dp"
+                                        android:singleLine="true" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="Test name">
+
+                                </TextView>
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/test_name"
+                                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins"
+                                        android:hint="Test Name"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textSize="18sp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:paddingEnd="@dimen/_3sdp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/searchButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardBackgroundColor="@color/Skyblue"
+                                    app:cardCornerRadius="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableStart="@drawable/ic_search_white"
+                                        android:drawablePadding="10dp"
+                                        android:fontFamily="@font/poppins"
+                                        android:padding="5dp"
+                                        android:text="Search"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        tools:ignore="HardcodedText" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/clear"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    app:cardBackgroundColor="@color/primaryGrey"
+                                    app:cardCornerRadius="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableStart="@drawable/ic_eraser"
+                                        android:drawablePadding="10dp"
+                                        android:fontFamily="@font/poppins"
+                                        android:padding="5dp"
+                                        android:text="Clear"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        tools:ignore="HardcodedText" />
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.cardview.widget.CardView>
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>
+
+
+

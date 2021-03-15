@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDropDownLabel"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="#000"
+        android:paddingVertical="7dp"
+        android:singleLine="true"
+        android:textSize="@dimen/dr_medium_text"
+        android:gravity="center_vertical" />
+
+</LinearLayout>

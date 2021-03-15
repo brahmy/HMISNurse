@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.nursedesk.nurse_desk_radiology.view_model.NurseDeskRadiologyViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayout"
+
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@color/white"
+            android:id="@+id/parentLinearLayout"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                android:background="@drawable/edit_text_bottom_border"
+                android:focusable="false"
+                android:layout_gravity="center"
+                android:inputType="text"
+                android:visibility="gone"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search_with_3_letters" />
+
+            <TextView
+
+                android:id="@+id/norecord"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/labparentRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:nestedScrollingEnabled="true"
+                    tools:ignore="UnusedAttribute" />
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

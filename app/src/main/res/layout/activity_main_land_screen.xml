@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.landingscreen.MainLandViewModel" />
+    </data>
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/homeLayoutInclude"
+            layout="@layout/land_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+
+            <include
+                android:id="@+id/navigationItem"
+                layout="@layout/navigation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

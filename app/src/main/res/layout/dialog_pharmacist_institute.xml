@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.oss.digihealth.nur.ui.institute.view_model.InstituteViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dialog_size"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="@dimen/dialog_size"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="MissingDefaultResource">
+
+            <LinearLayout
+                android:layout_width="@dimen/dialog_size"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                tools:ignore="RtlHardcoded,UselessParent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".9"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Select Institutions"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/closeImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    app:srcCompat="@drawable/ic_close_white" />
+            </LinearLayout>
+
+            <com.oss.digihealth.nur.utils.custom_views.MandatoryTextView
+                android:id="@+id/revalidationDateLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="start"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/Institution_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dr_medium_text"
+                tools:ignore="HardcodedText" />
+
+
+            <Spinner
+                android:id="@+id/spinner_institution"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.oss.digihealth.nur.utils.custom_views.MandatoryTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="left"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="Store selection"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dr_medium_text"
+                tools:ignore="HardcodedText" />
+
+
+            <Spinner
+                android:id="@+id/spinner_deparment"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/_3sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/secondaryColor"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_next"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingStart="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="7dp"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:cardBackgroundColor="@color/primaryGrey"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_eraser"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingStart="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="7dp"
+                        android:text="Clear"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

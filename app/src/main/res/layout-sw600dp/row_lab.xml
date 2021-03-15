@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLinearLayout"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/serialNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/poppins"
+            android:text="S.No"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+        <TextView
+            android:id="@+id/codeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/poppins"
+            android:text="Code"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:layout_width="match_parent"
+                android:id="@+id/autoCompleteTextView"
+                android:hint="Search with 3 letters"
+                android:fontFamily="@font/poppins"
+                android:drawableEnd="@drawable/ic_search"
+                android:background="@drawable/background_underline"
+                android:layout_height="match_parent"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+        <Spinner
+            android:id="@+id/type_spinner"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:layout_height="@dimen/_18sdp"
+
+            />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+        <Spinner
+            android:id="@+id/tolocation"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:layout_height="@dimen/_18sdp"
+
+            />
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/view" />
+
+        <ImageView
+            android:id="@+id/commentsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_comment_yellow_24dp" />
+
+
+
+        <ImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_bin" />
+    </LinearLayout>
+
+</LinearLayout>

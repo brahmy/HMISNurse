@@ -1,0 +1,980 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="facebook_app_id" tools:ignore="ExtraTranslation">968305966936614</string>
+    <string name="health_info">HEALTH MANAGEMENT INFORMATION SYSTEM</string>
+    <string name="Department">Department </string>
+    <string name="signinbutton">SIGN IN</string>
+
+
+    <string name="ward_selection">Ward </string>
+    <string name="Wardcode">Code</string>
+
+    <string name="Store">Store </string>
+
+    <string name="Radilogy">Radilogy </string>
+<string name="fav_add_success">Favourite added successfully</string>
+    <string name="temp_add_success">Template added successfully</string>
+    <string name="Lab">Lab </string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="something_went_wrong">Something went wrong</string>
+   <string name="Please_add_one_item">Please add one item</string>
+    <string name="Please_enter_all_fileds">Please enter all fields</string>
+
+    <string name="Instutionmaperror">No Institution is Mapped with this user</string>
+    <string name="Departmantmaperror">No Department is Mapped with this user</string>
+    <string name="unauthorized">UnAuthorized</string>
+    <string name="configname">EMR</string>
+    <string name="configfav">Work Flow</string>
+    <string name="title_activity_dashboard_screen">DashboardScreenActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="item_not_found">Please add any one field</string>
+    <string name="manage_institute">Manage Institute</string>
+
+    <string name="manage_template">Manage Template</string>
+    <string name="Institution">Please Select Institution *</string>
+    <string name="Instit">Institution</string>
+    <string name="Institution_title">Institution</string>
+    <string name="office">Office Selection*</string>
+    <string name="data_save">Data saved successfully</string>
+    <string name="empty_item">Please select any item</string>
+    <string name="bad">Bad Request</string>
+    <string name="MT_title">Manage Template</string>
+    <string name="MT_fav_title">Manage Favorite</string>
+    <string name="share_radio1">Myself</string>
+    <string name="Snomed_title">Snomed Browser</string>
+    <string name="share_radio2">My Department</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="add">Add</string>
+    <string name="add_new">Add New</string>
+    <string name="update">Update</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="revert">Revert</string>
+    <string name="moveall">Move all</string>
+    <string name="template">Manage Templates</string>
+
+    <string name="active">Active</string>
+
+    <string name="inactive">InActive</string>
+
+    <string name="details">Details</string>
+
+    <string name="Snomed">Snomed</string>
+    <string name="s_no">S.No</string>
+    <string name="Code">Code</string>
+    <string name="Type">Type</string>
+    <string name="Action">Action</string>
+
+    <string name="Dignosis">Dignosis</string>
+
+    <string name="icd_favourites">ICD Favourites</string>
+
+
+    <!--drug info-->
+
+    <string name="druginfo">Drug Info</string>
+
+    <string name="drugname">Drug Name</string>
+
+    <string name="drugcode">Drug Code</string>
+
+    <string name="drugpharmacy">Pharmacy</string>
+
+    <string name="drugAq">Availability Quantity</string>
+
+    <!--Bedmanagment-->
+
+    <string name="Transfer">Transfer</string>
+
+    <string name="fromward">From Ward</string>
+
+    <string name="toward">To Ward</string>
+
+    <string name="ManageBedTransfer">Manage Ward Transfer</string>
+
+    <string name="PatientDetails">Patient Details</string>
+
+
+    <!--allergy-->
+    <string name="serial_num">S.No</string>
+    <string name="date_time">Date and Time</string>
+    <string name="type">Type</string>
+    <string name="allergy">Allergy</string>
+    <string name="source">Source</string>
+    <string name="duration">Duration</string>
+    <string name="severity">Severity</string>
+    <string name="action">Action</string>
+
+    <string name="hash">#</string>
+
+    <!--prvprescription-->
+
+    <string name="drug_name">Drug Name</string>
+    <string name="route">Route</string>
+    <string name="frequency">Frequency</string>
+    <string name="instruction">Instruction</string>
+
+    <string name="loginheader">Login</string>
+
+    <string name="dialogMessage">Are you sure want to delete?</string>
+    <string name="my_profile">My Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="forgot">Forgot Password?</string>
+
+    <string name="forgotPasswordHeader">Forgot Password</string>
+
+    <string name="DescribeForgot">Enter below details to proceed further</string>
+
+    <string name="forgetotphint"> User Name / Email ID</string>
+
+    <string name="sendopt">SEND OTP</string>
+
+    <string name="restPassword">RESET PASSWORD</string>
+
+    <string name="enterOTP">Enter OTP</string>
+
+    <string name="enterNewPassword">Enter New Password</string>
+
+    <string name="enterConfirmPassword">Enter Confirm Password</string>
+
+    <string name="comment">Comment</string>
+
+    <string name="displayOrder">Display Order</string>
+
+    <string name="savetemplate">Save Template</string>
+
+    <string name="chiefcomplaint">Chief Complaints / Others</string>
+    <string name="confignamehistory">History</string>
+    <string name="configfavhistory">Doctor\'s Panel</string>
+    <string name="notification">Notification</string>
+    <string name="logout">Logout</string>
+
+    <string name="name">Name</string>
+
+    <string name="remark">Remarks</string>
+    <string name="Dignosisname">DiagnosisName</string>
+    <string name="treatment_name">TreatmentName</string>
+    <string name="delete_message">"Are you sure want to delete "</string>
+    <string name="managefavourites">Manage Favourites</string>
+
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <!--<string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>-->
+    <string name="terms_and_conditions"> This Mobile App and website is designed, developed and maintained by National Informatics Centre/NICSI and content provided by Ministry of Health &amp; Family Welfare, Government of India for the information to general public. The documents and information displayed in this website are for reference purposes only and do not purport to a legal document.
+
+Though all efforts have been made to ensure the accuracy and currency of the content on this website, the same should not be construed as a statement of law or used for any legal purposes. In case of any ambiguity or doubts, users are advised to verify / check with the Department(s) and / or other source(s), and to obtain appropriate professional advice before use of information.
+
+In case of any variance between what is stated and that contained in the relevant Acts, Rules, Regulations, Policy, Statements, etc, the latter shall prevail.Under no circumstances will this Ministry/Department be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use, of data, arising out of or in connection with the use of this website.
+
+These terms and conditions shall be governed by and construed in accordance with the Indian Laws. Any dispute arising under these terms and conditions shall be subject to the jurisdiction of the courts of India.
+
+The information posted on this website could include hypertext links or pointers to information created and maintained by non-Government / private organisations. Ministry of Health &amp; Family Welfare is providing these links and pointers solely for your information and convenience. When you select a link to an outside website, you are leaving the Ministry of Health &amp; Family Welfare website and are subject to the privacy and security policies of the owners / sponsors of the outside website.
+
+Ministry of Health &amp; Family Welfare does not guarantee the availability of such linked pages at all times.
+
+Ministry of Health &amp; Family Welfare cannot authorize the use of copyrighted materials contained in linked websites. Users are advised to request such authorization from the owner of the linked website.
+
+Ministry of Health &amp; Family Welfare does not guarantee that linked websites comply with Indian Government Web Guidelines.Ministry of Health &amp; Family Welfare neither endorses in any way nor offers any judgement or warranty and accepts no responsibility or liability for the authenticity, availability of any of the goods or services or for any damage, loss or harm, directly or consequential or any violation of international or local laws that may be incurred by your visiting and transacting on these Mobile App and websites.
+    </string>
+    <string name="text_with_bullet">\u25CF Lorem ipsum dolor sit amet</string>
+
+
+    <string-array name="item_fruits">
+
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Mango</item>
+        <item>Orange</item>
+        <item>Cherry</item>
+        <item>Grape</item>
+        <item>Coconut</item>
+        <item>Blueberry</item>
+        <item>Strawberry</item>
+        <item>Pear</item>
+        <item>Watermelon</item>
+
+    </string-array>
+
+    <string-array name="item_price">
+
+        <item>100</item>
+        <item>40</item>
+        <item>55</item>
+        <item>25</item>
+        <item>80</item>
+        <item>120</item>
+        <item>15</item>
+        <item>30</item>
+        <item>70</item>
+        <item>85</item>
+        <item>75</item>
+
+    </string-array>
+
+    <string name="namecode"> Diet Name / code</string>
+    <string name="sno">S.No</string>
+    <string name="qty">Qty</string>
+    <string name="str_category">category</string>
+    <string name="prev_certi">Previous Certificate</string>
+    <string name="date">Date</string>
+    <string name="certificate_name">Certificate Name</string>
+    <string name="issued">Issued BY</string>
+    <string name="languages">Languages</string>
+    <string name="ordered_raised">Ordered Raised</string>
+    <string name="sample_accepted">Sample Accepted</string>
+    <string name="sample_transferred">Sample Transferred</string>
+    <string name="sample_processed">Sample Processed</string>
+    <string name="waiting_for_approval">Waiting for Approval</string>
+    <string name="sample_acceptance">Sample Acceptance</string>
+    <string name="status">Status</string>
+    <string name="lab_name">Lab Name</string>
+    <string name="test_method">Test Method</string>
+    <string name="test_name">Test Name</string>
+    <string name="pin">PIN</string>
+    <string name="date_amp_time"><![CDATA[Date&Time]]></string>
+    <string name="sample_id">Sample Id</string>
+    <string name="order_num">Order Num</string>
+    <string name="patient_info">Patient Info</string>
+
+
+    <!--Blood Request-->
+    <string name="blood_group">Blood Group</string>
+    <string name="blood_hb">Blood HB</string>
+    <string name="purpose">Purpose</string>
+    <string name="previous_blood_bag_nos">Previous Blood Bag Nos.</string>
+    <string name="previous_tranfusion">Previous Tranfusion</string>
+    <string name="transfusion_reaction">Transfusion Reaction</string>
+    <string name="pregnant">Pregnant</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="blood_components">Blood Components</string>
+    <string name="select">Select</string>
+    <string name="no_of_units_required">Number of Units Required</string>
+    <string name="prev_blood_request">Prev. Blood Request</string>
+    <string name="enter_mandatory_fields">Please Enter the Mandatory Fields</string>
+    <string name="blood_req_by"> Requested By : </string>
+    <string name="blood_req_status"> Order Status : </string>
+    <string name="units">Units</string>
+    <string name="repeat">Repeat</string>
+    <string name="modify">Modify</string>
+
+    <!--Progress Notes-->
+    <string name="daily_notes">Daily Notes</string>
+    <string name="special_notes">Special Notes</string>
+
+    <!--Dashboard-->
+    <string name="session_mandatory">"<font color="#0000FF">Session</font><font color="#FF0000">*</font>"</string>
+    <string name="gender_mandatory">"<font color="#0000FF">Gender</font><font color="#FF0000">*</font>"</string>
+
+    <!--Region Summary Discharge-->
+    <string name="summary_discharge_previous_summary_label">Prev.Discharge Summary</string>
+    <!--end region-->
+
+    <!--Diet-->
+    <string name="name_code">Name/Code</string>
+
+    <!-- Region Discharge Summary  -->
+
+    <!--Date and Time-->
+    <string name="date_time_label">Date &amp; Time</string>
+
+    <!--Death Place-->
+    <string name="death_place_label">Death Place</string>
+
+    <!--Death Place-->
+    <string name="reason_label">Reason</string>
+
+    <!--Discharge Type-->
+    <string name="discharge_type">Select Discharge Type</string>
+
+    <!--Death Type-->
+    <string name="death_type">Select Death Type</string>
+
+    <!--Death Type-->
+    <string name="doctor_name_label">Select Doctor Name</string>
+
+    <!--Template-->
+    <string name="templates_label">Select Template</string>
+
+    <!--Patient Status-->
+    <string name="patient_status_label">Patient Status</string>
+
+    <!--Status Type-->
+    <string name="deceased">Deceased</string>
+
+    <!--Status Type-->
+    <string name="alive">Alive</string>
+
+    <!--Allergy Type-->
+    <string name="allergy_label">Allergy</string>
+
+    <!--Radiology Type-->
+    <string name="radiology">Radiology</string>
+
+    <!--Prescription Type-->
+    <string name="prescription">Prescription</string>
+
+    <!--Diagnosis Type-->
+    <string name="diagnosis">Diagnosis</string>
+
+    <!--Lab Type-->
+    <string name="lab_label">Lab</string>
+
+    <!--Vitals Type-->
+    <string name="vitals">Vitals</string>
+
+    <!--Investigation Type-->
+    <string name="investigation">Investigation</string>
+
+    <!--Chief  Type-->
+    <string name="chiefComplient">Chief Complient</string>
+    <!--Meditation  Type-->
+    <string name="Meditation">Meditation</string>
+    <!--Speciality  Type-->
+    <string name="Speciality">Speciality</string>
+
+
+    <!--Source Type-->
+    <string name="source_label">Source</string>
+
+    <!--Destination Type-->
+    <string name="destination_label">Destination</string>
+
+    <!--Severity Type-->
+    <string name="severity_label">Severity</string>
+
+    <!--Department Type-->
+    <string name="department_label">Department*</string>
+
+    <!--Prescribed By-->
+    <string name="prescribed_by">Prescribed By</string>
+
+    <!--Given By-->
+    <string name="given_by">Given By</string>
+
+    <!--Ordered By-->
+    <string name="ordered_by">Ordered By</string>
+
+    <!--Captured By-->
+    <string name="captured_by">Captured By</string>
+
+
+    <!--Captured By-->
+    <string name="taken_by">Taken By</string>
+
+    <!--Institution-->
+    <string name="institution">Institution</string>
+
+    <!--Code-->
+    <string name="code">Code</string>
+
+    <!--Test name-->
+    <string name="test_name_label">Test Name</string>
+
+    <!--Order To Location-->
+    <string name="order_to_location_label">Order To Location</string>
+
+    <!--Template Type-->
+    <string name="template_label">Template</string>
+
+    <!--Template Type-->
+    <string name="save_as_default_label">Set as default</string>
+
+    <!--Print Label-->
+    <string name="print_label">Print</string>
+
+    <!--Save Label-->
+    <string name="save_label">Save</string>
+
+    <!--Clear Label-->
+    <string name="clear_label">Clear</string>
+
+    <!--Type Label-->
+    <string name="typing_label">Type here…</string>
+
+    <string name="drug_name_label">Drug Name</string>
+    <string name="route_label">Route</string>
+    <string name="frequency_label">Frequency</string>
+    <string name="duration_label">Duration</string>
+    <string name="instruction_label">Instruction</string>
+
+    <!-- End Region -->
+
+    <!--IP Case Sheet-->
+    <string name="profile">"<font color="#333">Profile</font><font color="#FF0000">*</font>"</string>
+
+    <string name="ip_case_sheet_notes">IP Case Sheet Notes</string>
+    <string name="set_as_default">Set as Default</string>
+    <string name="prev_case_sheet_s">Previous IP Case Sheet Note(s)</string>
+
+
+    <!--OP Notes-->
+    <string name="op_notes">OP Notes</string>
+    <string name="prev_op_note_s">Previous OP Note(s)</string>
+
+
+    <string name="adult">Adult</string>
+    <string name="child">Child</string>
+    <string name="total">Total</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="institution_name">Institution</string>
+    <string name="app_institution_name">Institution Name</string>
+    <string name="district">District</string>
+    <string name="signin">SIGN IN</string>
+    <string name="registration">Registration</string>
+
+    <string name="appMaster">Application Master</string>
+
+    <string name="assetMaster">Assert Master</string>
+    <string name="lmis">LMIS</string>
+    <string name="labreport">Lab Report</string>
+
+    <string name="ipadmissionreport">IP Admission Report</string>
+    <string name="Salutation">Salutation</string>
+
+    <string name="period">Period</string>
+
+    <string name="recevie">Receive</string>
+
+    <string name="regreport">Registration Reports</string>
+    <string name="emr">EMR</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="videoTutorial">Video Tutorial</string>
+    <string name="userManual">User Manual</string>
+    <string name="helpDesk">Help Desk</string>
+    <string name="tickets">Tickets</string>
+
+    <string name="covidreg">COVID Registration</string>
+    <string name="neworder">New Order</string>
+    <string name="labtesttext">Lab Test</string>
+    <string name="testprocess">Test Process</string>
+    <string name="testapproval">Test Approval</string>
+    <string name="samplediaptch">Sample Dispatch</string>
+    <string name="resultdispath">Result Dispatch</string>
+    <string name="orderstatus">Order Status</string>
+    <string name="consolidatereport">Consolidated Report</string>
+    <string name="districtwisepatientreport">District Wise Patient Report</string>
+    <string name="districtwisetestreport">District Wise Test Report</string>
+    <string name="labwisereport">Lab Wise Report</string>
+    <string name="labtestwisereport">Lab Test Wise Report</string>
+    <string name="outpatient">Out Patient</string>
+    <string name="inpatient">In Patient</string>
+    <string name="config">Configuration</string>
+    <string name="logoutname">Are you sure want to Logout?</string>
+
+    <string name="WardBlurPrint">Ward Blue Print</string>
+
+    <!-- Quick Register-->
+    <string name="quickreg">OP Registration</string>
+    <string name="OPCorrection">OP Correction</string>
+    <string name="IPCorrection">IP Correction</string>
+    <string name="bluePrint">Blue Print</string>
+    <string name="salutation">Salutation</string>
+    <string name="professional">Professional</string>
+    <string name="middlename">Middle Name</string>
+    <string name="lastname">Last Name</string>
+
+    <string name="fathername">Father / Mother / Guardian Name</string>
+    <string name="suffixcode">Suffix Code</string>
+    <string name="age">Age</string>
+    <string name="Period">Period</string>
+    <string name="DOB">DOB</string>
+    <string name="Gender">Gender</string>
+    <string name="Mobile">Mobile</string>
+    <string name="Community">Community</string>
+    <string name="DepartmentName">Department</string>
+    <string name="Schema">Schema</string>
+    <string name="Unit">Unit</string>
+    <string name="Maternity">Maternity</string>
+    <string name="Address">Address</string>
+
+    <string name="ReasonforCorrection">Reason for Correction</string>
+    <string name="DoorNo">Door No</string>
+    <string name="StreetName">Street Name</string>
+    <string name="Country">Country</string>
+    <string name="State">State</string>
+    <string name="District">District</string>
+    <string name="Taluk">Taluk</string>
+    <string name="Village">Village</string>
+    <string name="PinCode">Pin Code</string>
+    <string name="SaveOrder">Save Order</string>
+    <string name="threeletterSearch">Search with 3 letters</string>
+    <string name="AdvanceSearch">Advance Search</string>
+    <string name="MobileNumber">Mobile Number</string>
+
+    <string name="MobileNumberPin">Mobile Number/ PIN</string>
+    <string name="ExistPin">Existing PIN</string>
+    <string name="PDS">PDS</string>
+    <string name="Aadhaar_number">Aadhaar Number</string>
+
+    <string name="Aadhaar_numberOldPin">Aadhaar Number/ Exist PIN</string>
+
+
+    <!-- Detailed Registration-->
+
+
+    <string name="DetialReg">Detailed Registration</string>
+
+    <string name="PataintINfo">Patient Info</string>
+
+    <string name="PatientIncome">Patient Income</string>
+
+    <string name="PatientOccupation">Patient Occupation</string>
+
+    <string name="Place">Place</string>
+
+
+    <string name="treatmentPlan">Treatment Plan</string>
+
+
+    <string name="ReferralDetails">Referral Details</string>
+
+    <string name="ReferralType">Referral Type</string>
+
+    <string name="ReferralDate">Referral Date</string>
+
+    <string name="InstitutionType">Institution Type</string>
+
+    <string name="OtherInstitution">Other Institution</string>
+
+    <string name="ReasonforReferral">Reason for Referral</string>
+
+    <string name="Complication">Complication</string>
+
+
+    <string name="ReferralHistory">Referral History</string>
+    <string name="VisitHistory">Visit History</string>
+    <string name="VisitNumber">Visit Number</string>
+    <string name="Department_Name">Department Name</string>
+    <string name="VisitType">Visit Type</string>
+    <string name="SpecialityClinicName">Speciality Clinic Name</string>
+    <string name="VisitDate">Visit Date</string>
+
+
+    <string name="PataintDetails">Patient Details</string>
+    <string name="Religion">Religion</string>
+    <string name="BillClass">Bill Class</string>
+    <string name="Paying">Paying</string>
+    <string name="Free">Free</string>
+    <string name="PINStatus">PIN Status</string>
+    <string name="OPStatus">OP Status</string>
+    <string name="RegistrationDate">Registration Date</string>
+
+
+    <!--bedmangement-->
+
+    <string name="professtionalInfo">Patient Information</string>
+
+    <string name="BedNumber">Bed Number</string>
+
+
+    <!--App master-->
+
+    <string name="healthoffice">Health Office</string>
+
+    <string name="referenceGropu">Reference Group</string>
+
+    <string name="dashboard">Dashboard</string>
+
+
+    <string name="sessionWiseReport">Session Wise Report</string>
+    <string name="date_wise_session">Date Wise Session</string>
+    <string name="department_wise_report">Department Wise</string>
+    <string name="dateWiseReport">Date Wise Report</string>
+    <string name="daywise_patient_list">Day Wise Patient List</string>
+    <string name="admission_ward_wise">Admission Ward Wise</string>
+    <string name="admission_doctor_wise">Admission Doctor Wise</string>
+    <string name="admission_discharge_wise">Admission Discharge Patient Wise</string>
+    <string name="admission_state_level">Admission State Level</string>
+    <string name="admission_district_level">Admission District Level</string>
+
+
+    <!--Ot Schedule-->
+    <string name="ot_title">OT Schedule</string>
+    <string name="ot_sur_name">Surgery Name</string>
+    <string name="ot_type">OT Type</string>
+    <string name="ot_name">OT Name</string>
+
+    <string name="ot_pin_mand">PIN*</string>
+    <string name="ot_pin">PIN</string>
+    <string name="ot_from">From</string>
+    <string name="ot_to">To</string>
+    <string name="ot_sur_name_mand">Surgery Name*</string>
+    <string name="ot_which_lession">Which Lession</string>
+    <string name="ot_which_side">Which Side</string>
+    <string name="ot_anaesthesia">Anaesthesia</string>
+    <string name="ot_diagnosis">Diagnosis</string>
+    <string name="ot_Chief_mand">Chief*</string>
+    <string name="ot_Chief">Chief</string>
+    <string name="ot_position">Position</string>
+    <string name="ot_Incision">Incision</string>
+    <string name="ot_Approach">Approach</string>
+    <string name="ot_surgeon_mand">Surgeon*</string>
+    <string name="ot_surgeon">Surgeon</string>
+    <string name="ot_assistantsurgeon_mand">Assistant Surgeon*</string>
+    <string name="ot_assistantsurgeon">Assistant Surgeon</string>
+    <string name="ot_assistant_nurse_mand">Assistant Staff Nurse*</string>
+    <string name="ot_assistant_nurse">Assistant Staff Nurse</string>
+    <string name="ot_anes_mand">Anesthetist*</string>
+    <string name="ot_anes">Anesthetist</string>
+    <string name="ot_forcebook">Force Booking</string>
+    <string name="ot_priority">Priority</string>
+    <string name="ot_grade">Grade</string>
+    <string name="ot_comments">Comments</string>
+
+    <string name="ot_add_surgery">Add Surgery</string>
+    <string name="ot_view_surgery">View Surgery</string>
+    <string name="ot_edit_surgery">Edit Surgery</string>
+    <string name="events">Events</string>
+
+
+    <string name="prescriptionnote">Prescription Notes</string>
+
+    <string name="prescriptioncheckbox">I/We hereby solemnly affirm and declare that the information given herein above its true and correct to the best of my knowledge</string>
+
+
+    <string name="prescriptionSigniture">Authorized Signature*</string>
+    <string name="MT_treatmentkit">Manage Treatment Kit</string>
+
+    <string name="ccc_compare">Compare</string>
+    <string name="enter_dates">Please enter the dates</string>
+
+
+    <string name="rmis">RMIS</string>
+
+    <string name="rmistech">RMIS New order</string>
+    <string name="rmisdashboard">RMIS Dashboard</string>
+
+    <string name="rmistest">RMIS Test </string>
+
+    <string name="rmisprocess">RMIS Process</string>
+
+    <string name="rmisapproval">RMIS Test Approval</string>
+
+    <string name="rmisorder">Order Status</string>
+
+    <string name="rmisdispatch">Result Dispatch</string>
+
+    <!--Ip -->
+
+    <string name="ip">IP Management</string>
+
+    <string name="ipDash">IP Dashboard</string>
+
+    <string name="ipAdmission">IP Admission</string>
+    <string name="editAdmission">Edit IP Admission</string>
+    <string name="viewAdmission">View IP Admission</string>
+
+    <string name="ipEmergencyCasualtyPatientList">Emergency Casualty Patient List</string>
+
+
+    <string name="BedManagementReport">Bed Management Reports</string>
+
+
+    <string name="Bedstatushw">Bed Status Hospital Wise</string>
+    <!--pharmacy-->
+
+    <string name="pharmacyName">Pharmacy Management</string>
+
+    <string name="pharmacyDash">Pharmacy Dashboard</string>
+
+    <string name="pharmacyDispense">Dispense</string>
+
+    <string name="pharmacyInj">Injection Worklist</string>
+
+    <string name="pharmacyReturn">Return</string>
+
+
+    <!-- Injection -->
+    <string name="ord_date">Order Date</string>
+    <string name="ord_no">Order No.</string>
+    <string name="pin_d">PIN</string>
+    <string name="quantity_name">Qty</string>
+    <string name="injection_name">Injection Name</string>
+
+    <string name="gen">Gender</string>
+    <string name="lastvdate">Last Visit Date</string>
+
+    <string name="inj_list">Injection List</string>
+
+    <string name="injec_code">Injection Code</string>
+    <string name="batch_no">Batch No.</string>
+    <string name="batch_qty">Batch Qty</string>
+    <string name="prescribed_qty">Prescribed Quantity</string>
+    <string name="administered_qty">Administered Quantity</string>
+    <string name="administering_qty">Administering Quantity</string>
+
+    <string name="administration">Administration</string>
+    <string name="administer">Administer</string>
+
+    <string name="qty_alert">Administering quantity must not be greater than Prescribed quantity</string>
+
+    <!-- Region for calendar event OT Schedule -->
+
+    <string-array name="month_array">
+        <item>january</item>
+        <item>february</item>
+        <item>march</item>
+        <item>april</item>
+        <item>may</item>
+        <item>june</item>
+        <item>july</item>
+        <item>august</item>
+        <item>september</item>
+        <item>october</item>
+        <item>november</item>
+        <item>december</item>
+    </string-array>
+
+    <!-- End region -->
+
+    <!-- region Tele Medicine -->
+    <string name="telemedicine_label" translatable="false">Telemedicine</string>
+    <!-- end region -->
+
+    <!-- Error message when a 401 or 403 error occurred -->
+    <string name="error_unauthorized" translatable="false">Unknown identifier</string>
+    <!-- Error message when a 422 error occurred -->
+    <string name="error_unprocessable_entity" translatable="false">The request cannot be completed</string>
+    <!--No results found-->
+    <string name="error_no_results" translatable="false">No result found</string>
+    <!-- Error message when an error occurred -->
+    <string name="error_generic_message" translatable="false">An error has occurred</string>
+    <!-- Error message when like/unlike call fails from remote server -->
+    <string name="error_like_unlike_failed" translatable="false">An error has occurred. Please try again</string>
+    <string name="error_invalid_credential" translatable="false">Invalid Credentials</string>
+
+
+    <!-- Alert dialog region-->
+    <string name="dialog_action_cancel" translatable="false">Cancel</string>
+    <string name="dialog_action_yes" translatable="false">Yes</string>
+    <string name="dialog_action_ok" translatable="false">OK</string>
+    <!-- end region-->
+
+    <!-- Internet connection region -->
+    <string name="no_connection" translatable="false">No internet connection…</string>
+    <!-- end region-->
+
+    <string name="book_appointment" translatable="false">Book Appointment</string>
+    <string name="book_appointment_session" translatable="false">Bookappointment \nSession</string>
+    <string name="book_appointment_add" translatable="false">Add Book \nAppointment</string>
+    <string name="doctor" translatable="false">Doctor</string>
+    <string name="department">Department</string>
+    <string name="radiology_lab" translatable="false">Radiology</string>
+    <string name="consultation" translatable="false">e-Consultation</string>
+    <string name="available" translatable="false">Available</string>
+    <string name="selected" translatable="false">Selected</string>
+    <string name="booked" translatable="false">Booked</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="permissions_needed" translatable="false">Permission Denied</string>
+    <string name="search_doctor_name" translatable="false">Search doctor…</string>
+    <string name="search_department_name" translatable="false">Search department…</string>
+    <string name="search_radiology_name" translatable="false">Search radiology…</string>
+    <string name="search_lab_name" translatable="false">Search lab…</string>
+    <string name="search" translatable="false">Search</string>
+    <string name="download" translatable="false">Download</string>
+    <string name="nursedesk">Nurse Desk</string>
+    <string name="panel">Panel</string>
+    <string name="last_booked" translatable="false">Last Booked :</string>
+    <string name="book_again" translatable="false">Book Again</string>
+    <string name="appointment_name" translatable="false">Name</string>
+    <string name="mobile_number" translatable="false">Mobile Number</string>
+    <string name="appointment_number" translatable="false">Appointment Number</string>
+    <string name="chuck_search" translatable="false">Search</string>
+    <string name="appointment_session" translatable="false">Appointment Session</string>
+    <string name="book_appointment_new" translatable="false">Book Appointment</string>
+
+    <string name="add_new_appointment_session" translatable="false">Add Appointment Session</string>
+    <string name="wardmaster">Ward Master</string>
+    <string name="wardname">Ward Name</string>
+    <string name="wardtype">Ward Type</string>
+
+    <string name="appointment_session_start_date" translatable="false">Start Date</string>
+    <string name="appointment_session_end_date" translatable="false">End Date</string>
+
+    <string name="appointment_session_start_time" translatable="false">Start Time</string>
+    <string name="appointment_session_end_time" translatable="false">End Time</string>
+    <string name="appointment_session_start_end_date" translatable="false">Holiday</string>
+    <string name="appointment_session_status_active" translatable="false">Active</string>
+    <string name="appointment_session_status_in_active" translatable="false">InActive</string>
+    <string name="appointment_session_name_label" translatable="false">Session Name</string>
+    <string name="appointment_session_slot_duration" translatable="false">Slot Duration</string>
+    <string name="appointment_session_consultation_charges" translatable="false">Consultation Charges</string>
+    <string name="appointment_session_e_consultation" translatable="false">e-Consultation</string>
+    <string name="appointment_session_regular_consultation" translatable="false">Regular Consultation</string>
+    <string name="appointment_filter" translatable="false">Filter</string>
+    <string name="appointment_search_label" translatable="false">Search with any 3 characters</string>
+    <string name="appointment_advanced_search_label" translatable="false">Advanced Search</string>
+    <string name="valid_field_message" translatable="false">Please fill any one field</string>
+    <string-array name="days_arrays">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <!-- Open Tok video region -->
+    <string name="open_tok_waiting_response" translatable="false">Waiting for patient to connect , \nwait few moment to connecting....</string>
+    <!-- end region -->
+
+    <string name="no_data">No data available in table
+</string>
+    <string name="no_data_avaliable">No Data Available</string>
+    <string name="parentofficename">Parent Institution Name</string>
+    <string name="levelofinstitution">Level Of Institution</string>
+    <string name="typeofsitution">Type Of Institution</string>
+    <string name="diagnosis_type_label" translatable="false">Diagnosis Type</string>
+    <string name="ward_name">Ward Name</string>
+    <string name="search_with_3_letters">Search with 3 letters</string>
+    <string name="add_ward_master">Add Ward Master</string>
+    <string name="room_name">Room Name</string>
+    <string name="room_number">Room Number</string>
+    <string name="description">Description</string>
+    <string name="room_classification">Room Classification</string>
+    <string name="number_of_beds">Number of Bed</string>
+    <string name="select_image">Select Image</string>
+    <string name="created_by">Created By</string>
+    <string name="created_on">Created On</string>
+    <string name="modified_by">Modified By</string>
+    <string name="modified_on">Modified On</string>
+    <string name="next">Next</string>
+    <string name="bed_number">Bed Number</string>
+    <string name="ward">Ward</string>
+    <string name="room">Room</string>
+    <string name="ip_store">IP Store</string>
+    <string name="op_store">OP Store</string>
+    <string name="injection_store">Injection Store</string>
+    <string name="advanced_search">Advance Search</string>
+    <string name="code_name">Code/Name</string>
+    <string name="bed">Bed</string>
+    <string name="floor_bed">Floor Bed</string>
+    <string name="room_bed">Room Bed</string>
+    <string name="number_of_room">Number of Room</string>
+    <string name="bed_number_start">Bed Number Start</string>
+    <string name="bed_number_end">Bed Number End</string>
+    <string name="floor_bed_allowed">Floor Bed Allowed</string>
+    <string name="number_of_floor_bed">Number of Floor Bed</string>
+    <string name="gender">Gender</string>
+    <string name="age_from">Age From</string>
+    <string name="age_to">Age To</string>
+    <string name="block">Block</string>
+    <string name="building">Building</string>
+    <string name="floor">Floor</string>
+    <string name="casualty">Casualty</string>
+    <string name="pin_mobile_number">PIN/Mobile Number</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="Add_medicine">Add Medicine</string>
+    <string name="select_salutation">Select Salutation</string>
+    <string name="select_location">Select Location</string>
+    <string name="select_Type">Select Priority</string>
+    <string name="occupation">Occupation</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="annual_income">Annual Income</string>
+    <string name="aadhaar_number">Aadhaar Number</string>
+    <string name="id_proof">ID Proof</string>
+    <string name="id_number">Id Number</string>
+    <string name="religion">Religion</string>
+    <string name="patient_category">Patient Category</string>
+    <string name="bill_required">Bill Required</string>
+    <string name="doctor_details">Doctor Details</string>
+    <string name="diet">Diet</string>
+    <string name="admitting_reason">Admitting Reason</string>
+    <string name="insurance_name">Insurance Name</string>
+    <string name="insurance_number">Insurance Number</string>
+    <string name="address_details">Address Details</string>
+    <string name="door_number">Door Number</string>
+    <string name="street_name">Street Name</string>
+    <string name="taluk">Taluk</string>
+    <string name="village">Village</string>
+    <string name="attender_details">Attender Details</string>
+    <string name="attender_name">Attender Name</string>
+    <string name="attender_relation">Attender Relation</string>
+    <string name="attender_mobile_number">Attender Mobile Number</string>
+    <string name="admission_status">Admission Status</string>
+    <string name="admission_date">Admission Date</string>
+    <string name="add_ip_admission">Add IP Admission</string>
+    <string name="ip_number">IP Number</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="patient_search">Patient Search</string>
+    <string name="last_visit_date">Last Visit Date</string>
+    <string name="bed_type">Bed Type</string>
+    <string name="ventilator_supported">Ventilator Supported</string>
+    <string name="oxygen_supported">Oxygen Supported</string>
+
+    <string name="copyright_msg" translatable="false">Copyrights © 2020 TN HMIS.All Rights Reserved</string>
+    <string name="copyright_msg_pune" translatable="false">Copyrights © 2020 Pune HMIS.All Rights Reserved</string>
+    <string name="copyright_name" translatable="false">Powered by</string>
+    <string name="version" translatable="false">Version</string>
+    <string name="number_of_ventilor">Number of Ventilator Beds</string>
+    <string name="number_of_oxygen">Number of Oxygen Beds</string>
+    <string name="terms_condition_label">Terms and conditions</string>
+    <string name="discription">Description</string>
+    <string name="Numberofrooms">Number of Room</string>
+    <string name="number_of_floor_beds">Number of Floor Bed</string>
+    <string name="father_mother_guardian_name">Father/Mother/Guardian Name</string>
+
+    <!--template-->
+    <string name="action_undo">Undo</string>
+    <string name="action_redo">Redo</string>
+    <string name="insert">Insert</string>
+
+    <string name="dialog_title_text_color">Select a Text Color</string>
+    <string name="dialog_title_text_back_color">Select a Text Background Color</string>
+
+    <!-- Insert Table -->
+    <string name="title_insert_table">Insert Table</string>
+    <string name="hint_no_of_columns">Number of columns</string>
+    <string name="hint_no_of_rows">Number of rows</string>
+
+    <!-- Insert Link -->
+    <string name="title_insert_link">Insert Link</string>
+    <string name="hint_text_to_display">Text to display</string>
+    <string name="hint_link_to">Link to</string>
+    <string name="ward_type">Ward Type</string>
+    <string name="patient_count">Patient Count</string>
+    <string name="result">Result</string>
+    <string name="accession_id">Accession Id</string>
+    <string name="profile_name">Profile Name</string>
+
+    <!--common-->
+    <string name="user">User</string>
+    <string name="display_order">Display Order</string>
+    <string name="diet_name">Diet Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="category">Category</string>
+    
+    <string name="existingPin">Existing PIN</string>
+    <string name="ufc_number">UFC Number/UFC Mobile Number</string>
+    <string name="date_and_time">"Date/Time"</string>
+
+    <string name="DrugName">Drug Name</string>
+
+    <string name="Route">Route</string>
+
+    <string name="Strength">Strength</string>
+    <string name="Frequency">Frequency</string>
+    <string name="Duration">Duration</string>
+    <string name="Instruction">Instruction</string>
+
+
+
+
+    <string name="select_any_slot_alert_message" translatable="false">Select any one slot to process</string>
+    <string name="error_test_name">Please Select TestName or Code</string>
+    <string name="error_priority">Please Select Priority</string>
+    <string name="error_location">Please Select Order To Location</string>
+    <string name="error_item_exsist">Already Item available in the list</string>
+    <string name="drug_info">Drug Info</string>
+
+</resources>

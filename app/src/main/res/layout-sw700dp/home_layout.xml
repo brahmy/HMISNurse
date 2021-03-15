@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="end"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Dashboard"
+                    android:textColor="@color/hmis_background"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/cvTelemedicine"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgTele"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="false"
+                            android:layout_centerInParent="true"
+                            android:focusable="true"
+                            android:tint="@color/red"
+                            app:srcCompat="@drawable/ic_video_call" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/confifav"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgconfig"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="false"
+                            android:layout_centerInParent="true"
+                            android:focusable="true"
+                            android:tint="@color/config"
+                            app:srcCompat="@drawable/ic_config" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgFilter"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:layout_centerInParent="true"
+                            android:focusable="true"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_filter" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/emr_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/outPatientCardView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginTop="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="@color/outPtientGreen"
+                                app:cardCornerRadius="4dp"
+                                app:contentPadding="12dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/outpatienttext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/ic_out_patient"
+                                    android:drawablePadding="12dp"
+                                    android:singleLine="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/outpatient"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/inPatientCardView"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:clickable="true"
+                                android:layout_marginStart="1dp"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="4dp"
+                                app:contentPadding="12dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/inpatienttext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/ic_inpatient"
+                                    android:drawablePadding="12dp"
+                                    android:fontFamily="@font/poppins"
+                                    android:singleLine="true"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/inpatient"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/confifavOld"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:layout_marginEnd="1dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="4dp"
+                                app:contentPadding="12dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/configtext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/ic_config"
+                                    android:drawablePadding="12dp"
+                                    android:fontFamily="@font/poppins"
+                                    android:singleLine="true"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/config"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvOldTelemedicine"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:visibility="visible"
+                                android:layout_marginStart="1dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="4dp"
+                                app:contentPadding="12dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:gravity="center_vertical"
+                                    android:drawablePadding="12dp"
+                                    android:singleLine="true"
+                                    android:drawableStart="@drawable/ic_config"
+                                    android:text="@string/telemedicine_label"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/register_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/outPtientGreen">
+
+                            <LinearLayout
+                                android:id="@+id/quickRegisiter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:paddingRight="10dp"
+                                    app:srcCompat="@drawable/ic_config" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text=" Quick Registartion"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="@color/colorPrimary">
+
+                            <LinearLayout
+                                android:id="@+id/covidRegisterButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:paddingRight="10dp"
+                                    app:srcCompat="@drawable/ic_config" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text=" Covid Registration"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LMIS_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/outPtientGreen">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:paddingRight="10dp"
+                                    app:srcCompat="@drawable/ic_out_patient" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text="Lab Test"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/colorPrimary">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:paddingRight="10dp"
+                                    app:srcCompat="@drawable/ic_config" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text="Test Process"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="@color/colorAccent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:paddingRight="10dp"
+                                    app:srcCompat="@drawable/ic_config" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingLeft="20dp"
+                                    android:text="Test Approval"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPatientsCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/graphview"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@color/white" />
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_top_diagonis"
+                        android:padding="3dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:background="#ffe066"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_click_td"
+                            android:layout_width="wrap_content"
+                            android:text="Top Diagnosis"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/iv_arrow_td"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_right"
+                            android:tint="@color/white"
+                            android:rotation="90"
+                            android:layout_height="wrap_content">
+                        </ImageView>
+                    </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_top_d"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:elevation="4dp"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_top_d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_top_compilents"
+                        android:padding="3dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:background="#99ff99"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_click_tc"
+                            android:layout_width="wrap_content"
+                            android:text="Top Complaints"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/iv_arrow_tc"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_right"
+                            android:tint="@color/white"
+                            android:rotation="90"
+                            android:layout_height="wrap_content">
+                        </ImageView>
+                    </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_top_c"
+                        android:layout_width="match_parent"
+                        android:elevation="4dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_top_c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_header_zero_stock"
+                        android:padding="3dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:background="#ffb366"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_click_zc"
+                            android:layout_width="wrap_content"
+                            android:text="Zero Stock"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="14sp"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/iv_arrow_zc"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_right"
+                            android:tint="@color/white"
+                            android:rotation="90"
+                            android:layout_height="wrap_content">
+                        </ImageView>
+                    </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_zero_s"
+                        android:layout_width="match_parent"
+                        android:elevation="4dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_zero_s"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.appbar.AppBarLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/customeTheme">
+
+                            <com.google.android.material.appbar.CollapsingToolbarLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <com.github.mikephil.charting.charts.LineChart
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                app:tabInlineLabel="true" />
+
+                        </com.google.android.material.appbar.AppBarLayout>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="@dimen/nav_drawer_width"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:layout_gravity="end">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/session_mandatory"
+                    style="@style/MobileTitleCommonTextView"/>
+
+                <Spinner
+                    android:id="@+id/spinnerSession"
+                    android:layout_marginStart="3dp"
+                    style="@style/MobileSpinnerStyle1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_mandatory"
+                    style="@style/MobileTitleCommonTextView"/>
+
+                <Spinner
+                    android:id="@+id/spinnerGender"
+                    android:layout_marginStart="3dp"
+                    style="@style/MobileSpinnerStyle1"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Begin Date"
+                        android:paddingBottom="16dp"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="End Date"
+                        android:paddingBottom="16dp"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnApply"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Apply"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

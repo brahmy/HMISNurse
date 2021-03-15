@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#000"
+        android:name="connection-8"
+        android:pathData="m10 5 -5 4 5 4v-3h9v-2h-9v-3zm4 6v3h-9v2h9v3l5 -4l-5 -4zm-2 -9c5.519 0 10 4.481 10 10c0 5.519 -4.481 10 -10 10c-5.519 0 -10 -4.481 -10 -10c0 -5.519 4.481 -10 10 -10zm0 -2c-6.623 0 -12 5.377 -12 12c0 6.623 5.377 12 12 12c6.623 0 12 -5.377 12 -12c0 -6.623 -5.377 -12 -12 -12z" />
+</vector>

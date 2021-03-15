@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mainLinearLayout">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_weight="5">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.30"
+                android:id="@+id/sNoTextView"
+                android:gravity="center"
+                android:text="S.No"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Observation"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:id="@+id/observationTxtView"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Result"
+                android:id="@+id/resultTextView"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Uom"
+                android:id="@+id/uomTextView"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.70"
+                android:gravity="center"
+                android:text="Reference Range"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:id="@+id/referenceRangeTextView"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/view" />
+
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/view" />
+
+    </LinearLayout>
+
+</LinearLayout>

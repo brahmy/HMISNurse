@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patientCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/previewLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/discharge_summary_color"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_2sdp"
+                android:text="10_Sep-2020 10:00 AM - Dermotologist-OP"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText,MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/buttonPDF"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_dropdown" />
+
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultLinearLayout"
+            android:visibility="visible"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="7dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/navColor"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text=" Description"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="@dimen/_219sdp"
+                    android:id="@+id/img_view"
+                    android:layout_height="@dimen/_219sdp">
+
+                </ImageView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

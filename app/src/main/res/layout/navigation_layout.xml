@@ -1,0 +1,3040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileCircleImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:src="@drawable/ic_menu_gallery"
+                tools:ignore="UnusedAttribute,VectorDrawableCompat" />
+
+            <LinearLayout
+                android:id="@+id/familyAddLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dr_medium_text"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text="20-03-2020"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/dr_medium_text"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/view"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!--My Profile-->
+
+                    <LinearLayout
+                        android:id="@+id/myProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_treatment"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/my_profile"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <!-- App Master-->
+
+
+                    <LinearLayout
+                        android:id="@+id/appMaster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_out_patient"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/appMaster_text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/appMaster"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/appMaster_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/appMasterList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/appDashBoard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/appDashBoardText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/dashboard"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/healthoffice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/healthoffice_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/healthoffice"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/departmenttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/department"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/application_institution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/institutiontext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/institution"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <!-- Assert Master-->
+
+
+                    <!--Registration-->
+
+                    <LinearLayout
+                        android:id="@+id/registration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_registration_icon"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/registration_text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/registration"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/add_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/registerList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/quick_Reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/quick_reg_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/quickreg"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/covid_reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/covidregtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/covidreg"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/detailedRegistration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+
+                                android:text="Detailed Registration"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold"
+
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/OPCorrection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/OPCorrectionText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:drawablePadding="30dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="@string/OPCorrection"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                    <!--LMIS-->
+
+                    <LinearLayout
+                        android:id="@+id/lab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_lmis_list"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/lmistext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/lmis"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/lab_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lmisList"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:id="@+id/new_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/newordertext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/neworder"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lab_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/labtest"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/labtesttext"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lab_process"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/textprocesstext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/testprocess"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lab_approvl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/testapprovaltext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/testapproval"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sample_dispatch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/sampledispathtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/samplediaptch"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/result_dispatch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/resultdispathtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/resultdispath"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/order_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute,UseCompoundDrawables">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/orderstatustext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/orderstatus"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--RMIS-->
+
+                    <LinearLayout
+                        android:id="@+id/radilogy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_logout"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/rad_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/rmis"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/rad_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rmislayout"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/rad_dashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/rad_dashboardtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmisdashboard"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/rad_new_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/rad_newordertext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmistech"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rad_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/radtest"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmistest"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rad_process"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/textradprocesstext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmisprocess"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rad_approvl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/testradapprovaltext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmisapproval"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rad_result_dispatch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/radsampledispathtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmisdispatch"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rad_order_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/radorderstatustext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/rmisorder"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--Reg Report-->
+
+
+                    <LinearLayout
+                        android:id="@+id/reg_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_registrationreport_icon"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/regreporttext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/regreport"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/reg_report_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/regreportlayout"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/sessionWise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/opSessionWisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/sessionWiseReport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/dateWise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/opDateWisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/dateWiseReport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/dateWiseSession_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/dateWiseSessionreporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/date_wise_session"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/departmentWise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/departmentWisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/department_wise_report"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dayWisePatient_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/dayWisePatientreporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/daywise_patient_list"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--  admissionreports-->
+
+
+                    <LinearLayout
+                        android:id="@+id/ipAdmission_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_ipmanagement_side"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/admissionreporttext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/ipadmissionreport"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/admission_report_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/ipadmissionreportlayout">
+                        <LinearLayout
+                            android:id="@+id/admission_day_patient_Wise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/admission_day_patient_Wisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="Admission Day Wise Patient List"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/admission_ward_Wise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/admission_ward_Wisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/admission_ward_wise"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/admission_doctor_Wise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/admission_doctor_Wisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/admission_doctor_wise"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/admission_state_level_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/admission_state_levelreporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/admission_state_level"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/admission_district_level_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/admission_district_levelreporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/admission_district_level"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/discharge_report_count_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/discharge_report_count_wise"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="Discharge Report Count Wise"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--Lab Report-->
+
+                    <LinearLayout
+                        android:id="@+id/lab_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_logout"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/labreporttext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/labreport"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/lab_report_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/labreportLayout"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/consolidated_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/consolidated_report_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/consolidatereport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/districtwise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/district_wise_patien_report_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/districtwisepatientreport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/districtwisetest_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/districtwisetestreporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/districtwisetestreport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/labWise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/labwisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/labwisereport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/labTestWise_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/labtestwisereporttext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/labtestwisereport"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!--Nurse Desk-->
+
+                    <LinearLayout
+                        android:id="@+id/nurse_desk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_nursedesk"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="Nurse Desk"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/nurse_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <!--EMR-->
+
+                    <LinearLayout
+                        android:id="@+id/emr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_out_patient"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/emrtext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/emr"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/emr_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/outpatient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="10" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="Out Patient"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/inPatient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="10" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="In Patient"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/config"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="10" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="Configuration"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_notifications"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/notification"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!--Tutorial-->
+
+                    <LinearLayout
+                        android:id="@+id/tutorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_out_patient"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tutorialtext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/tutorial"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/tutorial_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tutorialLayout"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+
+                        >
+                        <LinearLayout
+                            android:id="@+id/videoTutorial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/videoTutorialtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="Video Tutorial"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/userManual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/userManualtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="User Manual"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--Help Desk-->
+
+                    <LinearLayout
+                        android:id="@+id/helpDesk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_out_patient"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/helpDesktext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/helpDesk"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/helpDesk_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/helpdesklayout"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/tickets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/ticketstext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="Tickets"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--Pharmacy Management-->
+
+                    <LinearLayout
+                        android:id="@+id/pharmacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_out_patient"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/pharmacytext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/pharmacyName"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/pharmacy_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pharmacylayout"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/pharmacy_dashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/pharmacy_dashboard_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/pharmacyDash"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pharmacy_dispance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/pharmacy_dispence_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/pharmacyDispense"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pharmacy_injrectionWorklist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/pharmacy_injrectionWorklist_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/pharmacyInj"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pharmacy_return"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/pharmacy_return_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/pharmacyReturn"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Bed Maagment report-->
+
+                    <LinearLayout
+                        android:id="@+id/Bedmangementreport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_out_patient"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/bedmangementreporttext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/BedManagementReport"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/bedmangementreport_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bedreportlayout"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/Bedstatushw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/Bedstatushwtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/Bedstatushw"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--IP Management-->
+
+                    <LinearLayout
+                        android:id="@+id/ipmangement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_ipmanagement_side"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/ipmangementtext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/ip"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ipmangement_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ipmanagementlayout"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/ipmangement_dashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/ipmangement_dashboardtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/ipDash"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ipmangement_admission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/ipmangement_admission_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/ipAdmission"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ipwardmasterlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/ipwardmaster"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/wardmaster"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ipCorrectionlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/ipCorrectionmaster"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/IPCorrection"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/bluePrintlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/bluePrintmaster"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/WardBlurPrint"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ipmangement_emergency_casualty_patient_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/ipmangement_emergency_casualty_patient_list_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/ipEmergencyCasualtyPatientList"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--  Telemedicine -->
+                    <LinearLayout
+                        android:id="@+id/llTelemedicine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        android:visibility="visible"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_settings"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/tvTelemedicine"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/telemedicine_label"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivTelemedicine"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAppointmentSession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="10" />
+
+                        <TextView
+                            android:id="@+id/tvAppointmentSession"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/appointment_session"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAppointmentBook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:visibility="gone"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="10" />
+
+                        <TextView
+                            android:id="@+id/tvAppointmentBook"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/book_appointment_new"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <!--Settings-->
+
+                    <LinearLayout
+                        android:id="@+id/settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_settings"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/settingstext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/action_settings"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/settings_image"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="20"
+                            app:srcCompat="@drawable/ic_add"
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/settingLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/changePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/changepasswordtext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/change_password"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/languages"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:visibility="visible"
+                            android:weightSum="100"
+                            tools:ignore="UnusedAttribute">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="10" />
+
+                            <TextView
+                                android:id="@+id/languagetext"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="8dp"
+                                android:text="@string/languages"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dr_medium_text"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--Logout-->
+
+                    <LinearLayout
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:weightSum="100"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            app:srcCompat="@drawable/ic_logout"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/logouttext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:fontFamily="@font/poppins"
+                            android:paddingHorizontal="8dp"
+                            android:text="@string/logout"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dr_medium_text"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

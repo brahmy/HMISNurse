@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="signin">உள்நுழைக</string>
+    <string name="signinbutton">உள்நுழைக</string>
+    <string name="registration">பதிவு செய்தல்</string>
+    <string name="lmis">எல்.எம்.ஐ.எஸ்</string>
+    <string name="labreport">ஆய்வக அறிக்கை</string>
+    <string name="action_settings">அமைப்புகள்</string>
+    <string name="logout">வெளியேறு</string>
+    <string name="wardmaster">வார்டு மாஸ்டர்</string>
+    <string name="sno">வ.எண்</string>
+    <string name="institution_name">நிறுவனம்</string>
+    <string name="Wardcode">வார்டு குறியீடு</string>
+    <string name="wardname">வார்டு பெயர்</string>
+    <string name="wardtype">வார்டு Type</string>
+    <string name="status">நிலை</string>
+    <string name="action">செயல்</string>
+    <string name="quickreg">OP பதிவு</string>
+    <string name="covidreg">கோவிட் பதிவு</string>
+    <string name="add_ward_master">வார்டு மாஸ்டரைச் சேர்க்கவும்</string>
+    <string name="neworder">புதிய ஆர்டர்</string>
+    <string name="labtesttext">ஆய்வக சோதனை</string>
+    <string name="testprocess">சோதனை செயல்முறை</string>
+    <string name="testapproval">சோதனை ஒப்புதல்</string>
+    <string name="samplediaptch">மாதிரி அனுப்புதல்</string>
+    <string name="resultdispath">முடிவு அனுப்பும்</string>
+    <string name="orderstatus">ஒழுங்கு நிலை</string>
+    <string name="consolidatereport">ஒருங்கிணைந்த அறிக்கை</string>
+    <string name="districtwisepatientreport">மாவட்ட ஞான நோயாளி அறிக்கை</string>
+    <string name="districtwisetestreport">மாவட்ட ஞான சோதனை அறிக்கை</string>
+    <string name="labwisereport">ஆய்வக அறிவார்ந்த அறிக்கை</string>
+    <string name="labtestwisereport">ஆய்வக சோதனை விவேகமான அறிக்கை</string>
+    <string name="change_password">கடவுச்சொல்லை மாற்று</string>
+    <string name="languages">மொழிகள்</string>
+    <string name="outpatient">அவுட் நோயாளி</string>
+    <string name="inpatient">நோயாளியில்</string>
+    <string name="config">கட்டமைப்பு</string>
+    <string name="emr">ஈ.எம்.ஆர்</string>
+    <string name="forgot">கடவுச்சொல்லை மறந்துவிட்டீர்களா?</string>
+    <string name="download" translatable="false">பதிவிறக்க</string>
+
+    <string name="discription">விளக்கம்</string>
+    <string name="Department">துறை</string>
+    <string name="Numberofrooms">நம்பர்ஆஃப்ரூம்</string>
+    <string name="number_of_beds">நம்பர்ஆஃபெட்</string>
+    <string name="bed_number_start">பெட்நம்பர்ஸ்டார்ட்</string>
+    <string name="bed_number_end">பெட்நம்பர்எண்ட்</string>
+    <string name="floor_bed_allowed">Floor Bed Allowed</string>
+    <string name="number_of_floor_beds">மாடி படுக்கையின் எண்ணிக்கை</string>
+    <string name="number_of_oxygen">ஆக்ஸிஜன் படுக்கைகளின் எண்ணிக்கை</string>
+    <string name="number_of_ventilor">வென்டிலேட்டர் படுக்கைகளின் எண்ணிக்கை</string>
+    <string name="Gender">பாலினம்</string>
+
+
+
+</resources>
